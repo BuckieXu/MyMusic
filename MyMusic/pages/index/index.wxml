@@ -1,0 +1,75 @@
+<view>
+  <!-- 轮播图区域 -->
+  <swiper class="banners" indicator-dots indicator-color indicator-active-color autoplay>
+    <swiper-item wx:for="{{bannerList}}" wx:key="bannerId">
+      <image src="{{item.pic}}"></image>
+    </swiper-item>
+  </swiper>
+  <!-- 导航栏区域 -->
+  <view class='navContainer'>
+    <view class="navitem" bindtap="toRecommend">
+      <text class=" tubiao iconfont icon-tuijian"></text>
+      <text class="navcontent" >每日推荐</text>
+    </view>
+    <view class="navitem" bindtap="toPlaySquare">
+      <text class=" tubiao iconfont icon-gedan"></text>
+      <text class="navcontent">歌单</text>
+    </view>
+    <view class="navitem">
+      <text class=" tubiao iconfont icon-paihangbang"></text>
+      <text class="navcontent">排行榜</text>
+    </view>
+    <view class="navitem">
+      <text class=" tubiao iconfont icon-diantai"></text>
+      <text class="navcontent">电台</text>
+    </view>
+    <view class="navitem">
+      <text class=" tubiao iconfont icon-zhibo"></text>
+      <text class="navcontent">直播</text>
+    </view>
+  </view>
+  <!-- 推荐歌曲区域 -->
+  <view class="recommendContainer">
+    <!-- 头部区域 -->
+    <view class="recommentitle">推荐歌单</view>
+    <view class="recommenselected">
+      <text>为你精心推荐</text>
+      <text class="more" bindtap="toPlaySquare">查看更多</text>
+    </view>
+    <!-- 内容区 -->
+    <scroll-view class="recommendScroll" enable-flex scroll-x>
+      <view class="scrollItem" wx:for="{{recommentlist}}" wx:key="id" data-id="{{recommendItem.id}}" wx:for-item="recommendItem" bindtap="goPlaylist">
+        <image src="{{recommendItem.picUrl}}"></image>
+        <text>{{recommendItem.name}}</text>
+      </view>
+    </scroll-view>
+  </view>
+  <!-- 排行榜 -->
+  <view class="ranklist">
+    <view class="recommentitle">音乐榜单</view>
+    <view class="rankselected">
+      <text>热门风向标</text>
+      <text class="more">查看更多</text>
+    </view>
+    <swiper class="topListSwiper" circular next-margin="50rpx" previous-margin="50rpx">
+      <swiper-item wx:for="{{ranklist}}" wx:key="id" wx:for-item="ranklistItem">
+        <view class="swiperItem">
+          <!-- 榜单名 -->
+          <view class="title">{{ranklistItem.name}}</view>
+          <!-- 榜单内容 -->
+          <view class="rankcontent">
+            <image src="{{ranklistItem.coverImgUrl}}"></image>
+            <view class="rankmusic">
+              <view class="musicItem" wx:for="{{ranklistItem.tracks}}" wx:key="index" >
+                <text class="count">{{index+1}}</text>
+                <text class="musicName">{{item.first}}</text>
+              </view>
+            </view>
+
+          </view>
+
+        </view>
+      </swiper-item>
+    </swiper>
+  </view>
+</view>

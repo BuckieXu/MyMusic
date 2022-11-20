@@ -1,0 +1,211 @@
+/* 轮播图区域 */
+.iconfont{
+  font-size: 60rpx;
+}
+.banners {
+  width: 100%;
+}
+
+.banners image {
+  width: 100%;
+  height: 350rpx;
+}
+
+/* 导航栏 */
+.navContainer {
+  display: flex;
+}
+
+.navitem {
+  width: 20%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  
+}
+
+.tubiao {
+  width: 120rpx;
+  height: 120rpx;
+  background-color: red;
+  border-radius: 50px;
+  line-height: 120rpx;
+  text-align: center;
+}
+
+.navcontent {
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+/* 推荐歌曲区域 */
+.recommendContainer {
+  padding: 20rpx;
+  padding-top: 0;
+}
+
+.recommentitle {
+  margin-bottom: 14rpx;
+  font-size: 12px;
+  font-weight: lighter;
+}
+
+.recommenselected {
+  padding-bottom: 16rpx;
+}
+
+.more {
+  float: right;
+  width: 60px;
+  height: 20px;
+  border-radius: 10px;
+  border: 1px solid black;
+  font-size: 12px;
+  text-align: center;
+  line-height: 20px;
+}
+
+.recommendScroll {
+  display: flex;
+  height: 300rpx;
+}
+
+.scrollItem {
+  width: 200rpx;
+  height: 100%;
+  margin-right: 20rpx;
+}
+
+.scrollItem image {
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 20rpx;
+
+}
+
+.scrollItem text {
+  font-size: 28rpx;
+  /* 单行文本溢出隐藏 省略号代替 */
+  /*display: block;*/
+  /*white-space: nowrap;*/
+  /*overflow: hidden;*/
+  /*text-overflow: ellipsis;*/
+
+  /* 多行文本溢出隐藏 省略号代替*/
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  /*设置对其模式*/
+  -webkit-line-clamp: 2;
+  /*设置多行的行数*/
+}
+
+/* 排行榜 */
+.ranklist {
+  padding: 20rpx;
+  padding-top: 0;
+}
+
+/*
+.rankdisplay{
+  display: flex;
+  height: 580rpx; 
+}
+.rankItem{
+  width: rpx;
+  height: 500rpx;
+  background-color: blanchedalmond;
+  padding: 40rpx;
+  padding-top: 10rpx;
+}
+.rankname{
+  width: 100%;
+  height: 60rpx;
+  font-size: 28rpx;
+  line-height: 60rpx;
+}
+.rankmusic{
+  width: 100%;
+  height: 100rpx;
+  position: relative;
+  padding-bottom: 10rpx;
+  padding-top:10rpx ;
+}
+.rankmusic image{
+  width: 100rpx;
+  height: 100rpx;
+}
+.ranklistmusicname{
+  margin-left: 180rpx;
+  position:absolute;
+  left: 20rpx;
+  top: 20rpx;
+  font-size: 32rpx;
+} */
+/* 排行榜  */
+.topList {
+  padding: 20rpx;
+}
+
+.topListSwiper {
+  height: 400rpx;
+}
+
+.swiperItem {
+  width: 100%;
+  background: #fbfbfb;
+}
+
+.swiperItem .title {
+  font-size: 36rpx;
+  line-height: 80rpx;
+
+}
+
+/* 榜单内容 */
+.rankcontent {
+  position: relative;
+  width: 100%;
+}
+
+.rankcontent image {
+  position: absolute;
+  left: 10rpx;
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 12rpx;
+}
+
+.rankmusic {
+  position: absolute;
+  width: 300rpx;
+  height: 200rpx;
+  top: 0rpx;
+  left: 240rpx;
+
+}
+
+.musicItem {
+  /* 当一个元素设置为flex，其子元素会自动成为block元素*/
+  width: 300rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 32rpx;
+  margin-bottom: 10rpx;
+
+}
+
+ .musicName {
+  width: 200rpx;
+  font-size: 26rpx;
+  overflow:hidden;
+	text-overflow:ellipsis;
+  white-space:nowrap;
+  margin-left: 20rpx;
+
+}

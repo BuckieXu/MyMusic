@@ -1,0 +1,43 @@
+<view class="videoContainer">
+  <!-- 头部区域 -->
+  <view class="header">
+    <image src="/static/images/video/video.jpg"></image>
+    <view class="search" bindtap="toSearch">
+      搜索音乐
+    </view>
+    <image src="/static/images/logo.png"></image>
+  </view>
+  <!-- 导航区域 -->
+  <scroll-view class="navScroll" scroll-x='false' enable-flex scroll-into-view="{{'scroll'+navId}}" scroll-with-animation="true">
+    <view class="navItem " wx:for="{{navVideoList}}" wx:key="id" wx:for-item='VideoNavItem' id="{{'scroll'+VideoNavItem.id}}">
+      <view class="navContent {{navId === VideoNavItem.id?'active': ''}}" bindtap="changeNav" id="{{VideoNavItem.id}}" data-id="{{VideoNavItem.id}}">
+        {{VideoNavItem.name}}
+      </view>
+    </view>
+  </scroll-view>
+  <!-- 视频区域 -->
+  <scroll-view class="videoScroll" scroll-y="false" enable-flex >
+    <view class="videoItem" wx:for="{{VideoList}}" wx:key="vid">
+      <video src="http://clips.vorwaerts-gmbh.de/big_buck_bunny.mp4" id="{{item.data.vid}}" class="common" object-fit="cover">
+      </video>
+      <view class="content">{{item.data.title}}</view>
+      <view class="footer">
+        <image class="avatar" src="{{item.data.creator.avatarUrl}}"></image>
+        <text class="nickName">{{item.data.creator.nickname}}</text>
+        <view class="comments_praised">
+          <text class="item">
+            <text class="iconfont icon-dianzan"></text>
+            <text class="count">{{item.data.praisedCount}}</text>
+          </text>
+          <text class="item">
+            <text class="iconfont icon-pinglun"></text>
+            <text class="count">{{item.data.commentCount}}</text>
+          </text>
+          <button open-type="share" class="item btn">
+            <text class="iconfont icon-gengduo-shuxiang"></text>
+          </button>
+        </view>
+      </view>
+    </view>
+  </scroll-view>
+</view>

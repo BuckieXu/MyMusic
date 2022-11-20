@@ -1,0 +1,124 @@
+.header{
+  position: relative;
+  width: 100%;
+  height: 360rpx;
+}
+.recommentTopImg{
+  width: 100%;
+  height: 100%;
+}
+.recommendDateDay{
+  position: absolute;
+  left: 42%;
+  top: 50%;
+  font-size: 50rpx;
+  color: aliceblue;
+}
+.recommendDateMouth{
+  position: absolute;
+  left: 50%;
+  top: 56%;
+  font-size: 30rpx;
+  color: aliceblue;
+}
+/* 中间小组件 */
+.interaction{
+  float: left;
+  position: relative;
+  width: 600rpx;
+  height: 80rpx;
+  border-radius: 40rpx;
+  background-color: #5f998b;
+  display: flex;
+  z-index: 100;
+  top: -40rpx;
+  left: 70rpx;
+}
+.mock{
+  width: 30%;
+  height: 60rpx;
+  border-right: 2rpx solid white;
+  font-size: 34rpx;
+  color: white;
+  line-height: 60rpx;
+  text-align: center;
+  margin-top: 10rpx;
+  margin-left: 10rpx;
+}
+.pinlun{
+  border: none;
+}
+.number{
+  margin-left: 5rpx;
+}
+
+
+
+/* 推荐歌曲 */
+.recommendlist{
+  padding: 20rpx;
+  /* background-color: #2a615b; */
+  padding-top: 80rpx;
+  
+}
+.listHeader{
+  width: 100%;
+  height: 60rpx;
+  font-size: 34rpx;
+
+}
+.changeMore{
+  float: right;
+  padding-right: 30rpx;
+}
+/* 推荐歌曲列表 */
+.listItem{
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+}
+.listItem image{
+width: 80rpx;
+height: 80rpx;
+border-radius: 10rpx;
+margin-top: 10rpx;
+}
+.musicmsg{
+  height: 100%;
+  width: 70%;
+  margin-left: 16rpx;
+}
+.musicname{
+  width: 100%;
+  float: left;
+  height: 30rpx;
+  font-size:34rpx;
+  line-height: 30rpx;
+  margin-top: 16rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.authormsg{
+  width: 60%;
+  height: 30rpx;
+  font-size: 24rpx;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.btn{
+  display: flex;
+}
+.bofang{
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 30rpx;
+}
+.gengduo{
+  width: 50rpx;
+  height: 50rpx;
+  margin-top: 30rpx;
+  margin-left: 20rpx;
+}
+

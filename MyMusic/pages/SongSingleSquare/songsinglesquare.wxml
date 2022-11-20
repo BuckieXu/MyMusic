@@ -1,0 +1,18 @@
+<view class="squareContainer">
+  <!-- 上方导航栏 -->
+  <view class="navContainer" style="display:{{isplay?'':'none'}}">
+    <scroll-view class="navScroll" scroll-x='false' enable-flex scroll-into-view="{{'scroll'+navId}}" scroll-with-animation="true">
+      <view class="navItem" wx:for="{{playlistTag}}" wx:key="item.id" id="{{'scroll'+item.playlistTag.id}}" data-type="{{item.playlistTag.id}}" data-name="{{item.playlistTag.name}}" bindtap="changeNav">
+        <view class="navContent {{navId===item.id?'active':''}}">{{item.playlistTag.name}}</view>
+      </view>
+    </scroll-view>
+    <view class=" fenlei iconfont icon-yingyongzhongxin" bindtap="toPlaylistTab"></view>
+  </view>
+  <!-- 下方歌单 -->
+  <view class="displayMusic">
+    <view class="playlistItem" wx:for="{{playlists}}"  bindtap="goPlaylist" data-id="{{item.id}}">
+      <image src="{{item.coverImgUrl}}" class="Itemimg"></image>
+      <view class="singlename">{{item.name}}</view>
+    </view>
+  </view>
+</view>

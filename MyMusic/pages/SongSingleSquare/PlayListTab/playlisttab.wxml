@@ -1,0 +1,10 @@
+<image src="/static/images/bg.jfif" class="bgimg"></image>
+<view class="playlisttab">
+  <view class="listItem" wx:for="{{arr}}" wx:for-item="arritem">
+    <view class="title">{{categories[arritem.category]}}</view>
+    <view class="titletab" >
+      <view class="tab" wx:for="{{arritem.list}}" data-name="{{item.name}}" bindtap="ToPlaylistDetail">{{item.name}}</view>
+    </view>
+  </view>
+
+</view>

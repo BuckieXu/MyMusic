@@ -1,0 +1,43 @@
+<view class="recommendContainer">
+  <!-- 上面照片部分 -->
+  <view class="header">
+    <image src="{{playlist.coverImgUrl}}" class="recommentTopImg"></image>
+  </view>
+  <!--  歌单交互组件-->
+  <view class="interaction">
+    <view class="mock">
+      <text class="iconfont icon-shoucang"></text>
+      <text class="number">12万</text>
+    </view>
+    <view class="mock">
+      <text class="iconfont icon-pinglun1" ></text>
+      <text class="number">1279</text>
+    </view>
+    <view class="mock pinlun">
+      <text class=" iconfont icon-fenxiang"></text>
+      <text class="number">1710</text>
+    </view>
+  </view>
+  <!-- 推荐歌曲表头 -->
+  <view class="recommendlist">
+    <view class="listHeader">
+      <text>播放全部</text>
+      <text class="changeMore">多选</text>
+    </view>
+    <!--推荐歌曲列表 -->
+    <scroll-view scroll-y="false">
+      <view class="listItem" wx:for="{{playlist.tracks}}" data-id="{{item.id}}" bindtap="bofang">
+        <image src="{{item.al.picUrl}}"></image>
+        <view class="musicmsg">
+          <text class="musicname">{{item.name}}</text>
+          <text class="authormsg">{{item.al.name}}</text>
+        </view>
+        <view class="btn">
+          <text class=" bofang iconfont icon-bofang"></text>
+          <text class=" gengduo iconfont icon-gengduo-shuxiang"></text>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+  <view class="kk"></view>
+</view>

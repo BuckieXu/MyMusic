@@ -1,0 +1,165 @@
+.musicDetailContainer{
+  position: relative;
+  background-color: rgb(0,0,0,0.5);
+  height: 100%;
+}
+.musicname{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font: 36rpx;
+}
+.author{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 24rpx;
+}
+.pedestal{
+  z-index: 100;
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+  background-color: aliceblue;
+  position: absolute;
+  top: 80rpx;
+  left: 46%;
+}
+/* 摇杆3 */
+.rocker{
+  position: absolute;
+  z-index: 99;
+  top: 110rpx;
+  left: 45%;
+  width: 192rpx;
+  height: 274rpx;
+  transform-origin: 40rpx 0;
+  transform: rotate(-20deg);
+  transition: transform 1s;
+}
+.needleRotate {
+  transform: rotate(0deg);
+}
+/* 圆盘 */
+
+.discContainer{
+  position: relative;
+  top: 150rpx;
+  left: 10%;
+  width: 598rpx;
+  height: 598rpx;
+}
+.disc {
+  width: 598rpx;
+  height: 598rpx;
+}
+.musicImg{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+  width: 370rpx;
+  height: 370rpx;
+  border-radius: 50%;
+}
+
+.discAnimation {
+  animation: kk 10s linear infinite;
+  animation-delay: 1s;
+}
+
+/*
+  @keyframes: 设置动画帧
+    1) from to
+      - 使用于简单的动画，只有起始帧和结束帧
+      - 北京 - 上海  直达
+    2) 百分比
+      - 多用于复杂的动画，动画不止两帧
+      - 北京 - 上海 ---> 北京 -- 天津 --- 深圳 --- 上海
+      - 0% - 100%, 可以任意拆分
+
+*/
+
+@keyframes kk {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+Control {
+  position: absolute;
+  bottom: 40rpx;
+  left: 0;
+  border-top: 1rpx solid #fff;
+  width: 100%;
+  display: flex;
+
+}
+.musicControl{
+  width: 100%;
+  height: 200rpx;
+  position: absolute;
+  bottom: 0;
+}
+.musicControl text {
+  width: 20%;
+  height: 120rpx;
+  line-height: 120rpx;
+  color: #fff;
+  font-size: 50rpx;
+  margin-left: 80rpx;
+}
+
+.musicControl  text.big{
+  font-size: 80rpx;
+}
+
+
+/* 进度条控制区域 */
+.progressControl {
+  position: absolute;
+  left: 60rpx;
+  bottom: 200rpx;
+  width: 640rpx;
+  height: 80rpx;
+  line-height: 80rpx;
+  display: flex;
+  font-size: 28rpx;
+}
+
+
+.barControl {
+  position: relative;
+  width: 450rpx;
+  height: 4rpx;
+  background: rgba(0, 0, 0, 0.4);
+  margin: auto;
+}
+
+
+.audio-currentTime-Bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  height: 4rpx;
+  background: red;
+
+}
+
+
+/* 小圆球 */
+.audio-circle {
+  position: absolute;
+  right: -12rpx;
+  top: -4rpx;
+  width: 12rpx;
+  height: 12rpx;
+  border-radius: 50%;
+  background: #fff;
+}
